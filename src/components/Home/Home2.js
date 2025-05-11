@@ -23,7 +23,7 @@ function Home2() {
               <br />
               <br />
               
-                <b className="purple">Expert en Python</b>, je développe aussi en <b className="purple">R</b>, et me forme actuellement au <b className="purple">Rust</b>.
+                Expert en <b className="purple">Python</b>, je développe aussi en <b className="purple">R</b>, et me forme actuellement au <b className="purple">Rust</b>.
               
               <br />
               <br />
