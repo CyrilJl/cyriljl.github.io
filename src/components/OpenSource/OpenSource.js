@@ -1,14 +1,9 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import { Col, Container, Row } from "react-bootstrap";
+import icon_meteofetch from "../../Assets/Projects/icon_meteofetch.png";
 import icon_optimask from "../../Assets/Projects/icon_optimask.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import icon_timefiller from "../../Assets/Projects/icon_timefiller.png";
+import Particle from "../Particle";
+import ProjectCard from "./ProjectCards";
 
 function OpenSource() {
   return (
@@ -33,13 +28,12 @@ function OpenSource() {
               OptiMask repose en grande partie sur numba pour les performances."
               ghLink="https://github.com/CyrilJl/OptiMask"
               documentationLink="https://optimask.readthedocs.io"
-              // demoLink="https://chatify-49.web.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={icon_timefiller}
               isBlog={false}
               title="TimeFiller"
               description="Un package python conçu pour l'imputation de données manquantes de séries temporelles, mais
@@ -52,14 +46,14 @@ function OpenSource() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={icon_meteofetch}
               isBlog={false}
               title="meteofetch"
               description="Un client python pour récupérer les données des modèles Arome et Arpege de MétéoFrance sans
               clé d'API. meteoftech télécharge et met en forme les fichiers grib mis à disposition par MétéoFrance sous
               forme de xarray.DataArray."
               ghLink="https://github.com/CyrilJl/meteoftech"
-              documentationLink="https://meteofetch.readthedoc.io"    
+              documentationLink="https://meteofetch.readthedoc.io"
             />
           </Col>
         </Row>
