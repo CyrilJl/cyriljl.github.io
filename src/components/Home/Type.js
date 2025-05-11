@@ -10,12 +10,14 @@ function Type() {
           "Développeur Open Source",
           "Passionné de SIG",
           "Passionné de modélisation",
-          "Passioné de météorologie",
-          "Passioné de climatologie"
+          "Passionné de modélisation météo",
+          "Passionné de modélisation climat"
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
+        deleteSpeed: 10,
+        delay: 10,
+        pauseFor: 4000
       }}
     />
   );
