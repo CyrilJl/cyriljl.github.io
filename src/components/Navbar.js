@@ -1,18 +1,13 @@
-import React, { useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import {
-  AiFillStar,
-  AiOutlineHome,
   AiOutlineFundProjectionScreen,
-  AiOutlineUser,
+  AiOutlineHome
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import logo from "../Assets/france_mesh_w.png";
 
 import { CgFileDocument } from "react-icons/cg";
 
@@ -39,7 +34,17 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <img
+            src={logo}
+            className="img-fluid logo"
+            alt="brand"
+            style={{
+              width: "auto",     // Assure que la largeur s'ajuste pour maintenir le ratio
+              height: "auto",    // Essentiel pour que la hauteur s'ajuste et respecte le ratio, prioritaire sur .logo
+              objectFit: "contain", // Assure que l'image est mise à l'échelle correctement dans sa boîte
+              alignSelf: "center" // Empêche l'étirement vertical par le conteneur flex (Navbar.Brand)
+            }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
