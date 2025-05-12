@@ -17,7 +17,7 @@ function OpenSource() {
           Mes principaux projets open source, sous forme de package python (disponibles sur PyPI et conda-forge).
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={3} className="project-card">
             <ProjectCard
               imgPath={icon_optimask}
               isBlog={false}
@@ -31,7 +31,7 @@ function OpenSource() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={3} className="project-card">
             <ProjectCard
               imgPath={icon_timefiller}
               isBlog={false}
@@ -44,7 +44,7 @@ function OpenSource() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={3} className="project-card">
             <ProjectCard
               imgPath={icon_meteofetch}
               isBlog={false}
