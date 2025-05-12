@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Preloader from "../src/components/Pre";
-import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import OpenSource from "./components/OpenSource/OpenSource";
-import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
+import Navbar from "./components/Navbar";
+// import About from "./components/About/About";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
+  Navigate,
+  Route, HashRouter as Router,
+  Routes
 } from "react-router-dom";
+import "./App.css";
+import OpenSource from "./components/OpenSource/OpenSource";
+import Resume from "./components/Resume/ResumeNew";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -39,9 +37,9 @@ function App() {
           <Route path="/opensource" element={<OpenSource />} />
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
