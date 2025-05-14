@@ -2,10 +2,8 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import {
-  AiOutlineFundProjectionScreen,
-  AiOutlineHome
-} from "react-icons/ai";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { AiOutlineFundProjectionScreen, AiOutlineHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "../Assets/france_mesh_w.png";
 
@@ -39,10 +37,10 @@ function NavBar() {
             className="img-fluid logo"
             alt="brand"
             style={{
-              width: "auto",     // Assure que la largeur s'ajuste pour maintenir le ratio
-              height: "auto",    // Essentiel pour que la hauteur s'ajuste et respecte le ratio, prioritaire sur .logo
+              width: "auto", // Assure que la largeur s'ajuste pour maintenir le ratio
+              height: "auto", // Essentiel pour que la hauteur s'ajuste et respecte le ratio, prioritaire sur .logo
               objectFit: "contain", // Assure que l'image est mise à l'échelle correctement dans sa boîte
-              alignSelf: "center" // Empêche l'étirement vertical par le conteneur flex (Navbar.Brand)
+              alignSelf: "center", // Empêche l'étirement vertical par le conteneur flex (Navbar.Brand)
             }}
           />
         </Navbar.Brand>
@@ -86,6 +84,23 @@ function NavBar() {
                 Open Source
               </Nav.Link>
             </Nav.Item>
+
+            <NavDropdown title="Thématiques" id="thematiques-nav-dropdown">
+              <NavDropdown.Item
+                as={Link}
+                to="/thematiques/catnat"
+                onClick={() => updateExpanded(false)}
+              >
+                Catastrophes Naturelles
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
+                to="/thematiques/climat"
+                onClick={() => updateExpanded(false)}
+              >
+                Climat
+              </NavDropdown.Item>
+            </NavDropdown>
 
             <Nav.Item>
               <Nav.Link
