@@ -6,13 +6,16 @@ import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Navigate,
-  Route, HashRouter as Router,
-  Routes
+  Route,
+  HashRouter as Router,
+  Routes,
 } from "react-router-dom";
 import "./App.css";
 import OpenSource from "./components/OpenSource/OpenSource";
 import Resume from "./components/Resume/ResumeNew";
 import ScrollToTop from "./components/ScrollToTop";
+import IndexCatNat from "./components/Thematiques/CatNat/IndexCatNat";
+import IndexClimat from "./components/Thematiques/Climat/IndexClimat";
 import "./style.css";
 
 function App() {
@@ -35,6 +38,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/opensource" element={<OpenSource />} />
+          <Route path="/thematiques/catnat" element={<IndexCatNat />} />
+          <Route path="/thematiques/climat" element={<IndexClimat />} />
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" />} />
