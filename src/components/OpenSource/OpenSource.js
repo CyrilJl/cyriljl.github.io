@@ -14,7 +14,8 @@ function OpenSource() {
           Mes projets <strong className="purple">open source </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Mes principaux projets open source, sous forme de package python (disponibles sur PyPI et conda-forge).
+          Mes principaux projets open source, sous forme de package python
+          (disponibles sur PyPI et conda-forge).
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={3} className="project-card">
